@@ -2,14 +2,15 @@
 
 # Delieverables
 1. Half-precision floating-point(f16)乘法器設計
-⚫ Design Verilog 檔案
-⚫ Design 說明文件
-⚫ Testbench
+i. Design Verilog 檔案
+ii. Design 說明文件
+iii. Testbench
+
 2. FPGA 測試流程和結果
-⚫ 流程說明文件
-⚫ 專案啟動腳本(tcl): 從 source code 建立 viado 專案的流程說明，以及使
-用 vitis 測試 IP 的流程說明
-⚫ Vivado 合成結果 report: timing, resource
+i. 流程說明文件
+ii. 專案啟動腳本(tcl): 從 source code 建立 viado 專案的流程說明，以及使用 vitis 測試 IP 的流程說明
+iii. Vivado 合成結果 report: timing, resource
+
 3. FPGA 執行成果截圖
 
 # Requirements:
