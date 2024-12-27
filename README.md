@@ -43,6 +43,10 @@ diligent tutorial on vitis:
 
 https://www.youtube.com/watch?v=VO5zEzZnoNU
 
+** In order to run/debug a C program on the processor, the jumper for jtag must be disconnected.  All 4 Dip Switches must be ON..So - all 4 "ON" as in the location of the "ON" label on the dip component.
+They are all active low.. so they are actually all off.. I think.. but set them to "ON" - as in towards the center of the board and you should be OK. I recall the instructions being unclear.
+You should get a green light right away after turning the board on.. if it stays read something is wrong.
+
 ** note to self: 
 after pressing debug on vitis check the serial connection output on mobaxterm. the output is there. Also do not click run/dubug button on the flow directly, go to the debug menu and start the C program from there instead.
 
