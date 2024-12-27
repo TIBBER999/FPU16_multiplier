@@ -25,6 +25,17 @@ iii. Vivado 合成結果 report: timing, resource
 3. Should implement f16 golden function in FPU_Multiplier.c, and verify the result
 from PL.
 
+# Implementations:
+
+Block diagram
+![image](https://github.com/TIBBER999/Deepmentor_task/blob/main/img/IP%20block%20diagram.png)
+
+fp16 exponent and mantissa
+![image](https://github.com/TIBBER999/Deepmentor_task/blob/main/img/b22592916ffccc87101c4eac9d6722f4.png)
+
+design address locations
+
+
 
 # Vivado guide: 
 https://caslab.ee.ncku.edu.tw/dokuwiki/_media/course:logic_system_practice:pynq_usage.pdf
@@ -53,4 +64,9 @@ after pressing debug on vitis check the serial connection output on mobaxterm. t
 
 # half-precision floating point format:
 https://en.wikipedia.org/wiki/Half-precision_floating-point_format
+
+Almost all modern uses follow the IEEE 754-2008 standard, where the 16-bit base-2 format is referred to as binary16, and the exponent uses 5 bits. This can express values in the range ±65,504, with the minimum value above 1 being 1 + 1/1024. 
+
+![image](picture or gif url)
+
 
