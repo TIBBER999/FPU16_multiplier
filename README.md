@@ -26,9 +26,26 @@ iii. Vivado 合成結果 report: timing, resource
 from PL.
 
 
+# Vivado guide: 
+https://caslab.ee.ncku.edu.tw/dokuwiki/_media/course:logic_system_practice:pynq_usage.pdf
+
 # FPGA guide: 
 https://www.makarenalabs.com/from-pynq-to-bare-metal-the-full-guide/ 
 https://caslab.ee.ncku.edu.tw/dokuwiki/_media/course:logic_system_practice:pynq_usage.pdf 
+
+
+
+ZYNQ for beginners: programming and connecting the PS and PL | Part 2
+
+https://www.youtube.com/watch?v=AOy5l36DroY 
+
+diligent tutorial on vitis: 
+
+https://www.youtube.com/watch?v=VO5zEzZnoNU
+
+** note to self: 
+after pressing debug on vitis check the serial connection output on mobaxterm. the output is there. Also do not click run/dubug button on the flow directly, go to the debug menu and start the C program from there instead.
+
 
 # half-precision floating point format:
 https://en.wikipedia.org/wiki/Half-precision_floating-point_format
