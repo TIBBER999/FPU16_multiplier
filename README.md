@@ -26,7 +26,7 @@ iii. Vivado 合成結果 report: timing, resource
 from PL.
 
 # Implementations:
-The role of the 16 bit floating point multiplier(fp16) is to multiply 2 floating points (a, b) and compute its product. The 16 bits floating points representation follows the IEEE 754-2008 standard. According to the standard when the two floating points multiply, its signage is determined by the XOR of the MSB of a and b(a<sub>sign</sub> ^ b<sub>sign</sub>), its exponent is the summation of the two exponents subtracting a bias of 15<sub>10</sub> (a<sub>exp</sub> + b<sub>exp</sub> - 15<sub>10</sub>), and lastly its mantissa is the multiplication of their respective mantissa with a leading 1 as its MSB ({1'b1, a<sub>man</sub>} * {b<sub>man</sub>}).
+The role of the 16 bit floating point multiplier(fp16) is to multiply 2 floating points (a, b) and compute its product. The 16 bits floating points representation follows the IEEE 754-2008 standard. According to the standard when the two floating points multiply, its signage is determined by the XOR of the MSB of a and b(a<sub>sign</sub> ^ b<sub>sign</sub>), its exponent is the summation of the two exponents subtracting a bias of 15<sub>10</sub> (a<sub>exp</sub> + b<sub>exp</sub> - 15<sub>10</sub>), and lastly its mantissa is the multiplication of their respective mantissa with a leading 1 as its MSB ({1'b1, a<sub>man</sub>} * {1'b1, b<sub>man</sub>}).
 
 The following tool can be used to help understand 16 bits floating point multiplication with detailed steps in the calculation:
 
