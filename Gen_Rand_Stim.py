@@ -42,7 +42,7 @@ for i in range (num_tests):
 tb_template = f"""
     `timescale 1ns / 1ps
 
-    module {dut_name}_tb;
+    module TB_PY_{dut_name};
 
         logic clk;
         logic rst_n;
@@ -71,5 +71,5 @@ endmodule
 """
     
 tb_template = tb_template + char +tb_end;    
-with open(f"{dut_name}_tb.sv", "w") as f:
+with open(f"TB_PY_{dut_name}.sv", "w") as f:
     f.write(tb_template)    
