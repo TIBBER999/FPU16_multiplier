@@ -48,7 +48,7 @@ fp16 exponent and mantissa
 The block diagram of the design in conjuction with the ZYNQ7 processor is shown below
 ![image](https://github.com/TIBBER999/Deepmentor_task/blob/main/img/block%20diagram.png)
 
-#Testbench
+# Testbench
 In this repository there are two testbenches for verifying the DUT (fp16 unit): 
 
 1. TB_PY_fpu16_multiplier.sv
