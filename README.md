@@ -29,10 +29,13 @@ from PL.
 The role of the 16 bit floating point multiplier(fp16) is to multiply 2 floating points (a, b) and compute its product. The 16 bits floating points representation follows the IEEE 754-2008 standard. According to the standard when the two floating points multiply, its signage is determined by the XOR of the MSB of a and b(a<sup>sign</sup> ^ b<sup>sign</sup>), its exponent is the summation of the two exponents subtracting a bias of 15<sub>10</sub> (a<sub>exp</sub> + b<sup>exp</sup> - 15<sup>10</sup>), and lastly its mantissa is the multiplication of their respective mantissas with a leading 1 as its MSB ({1'b1, a<sub>man</sub>} * {b<sup>man</sup>}).
 
 The following tool can be used to help understand 16 bits floating point multiplication with detailed steps in calculation:
+
 https://numeral-systems.com/ieee-754-multiply/
+
 https://weitz.de/ieee/
 
 fp16 exponent and mantissa
+
 ![image](https://github.com/TIBBER999/Deepmentor_task/blob/main/img/b22592916ffccc87101c4eac9d6722f4.png)
 
 
