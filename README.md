@@ -40,7 +40,7 @@ fp16 exponent and mantissa
 
 
 The block diagram of the design in conjuction with the ZYNQ7 processor is shown below
-![image](https://github.com/TIBBER999/Deepmentor_task/blob/main/img/IP%20block%20diagram.png)
+![image](https://github.com/TIBBER999/Deepmentor_task/blob/main/img/block%20diagram.png)
 
 # Vivado guide: 
 https://caslab.ee.ncku.edu.tw/dokuwiki/_media/course:logic_system_practice:pynq_usage.pdf
