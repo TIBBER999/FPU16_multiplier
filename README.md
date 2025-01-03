@@ -45,9 +45,21 @@ fp16 exponent and mantissa
 
 ![image](https://github.com/TIBBER999/Deepmentor_task/blob/main/img/b22592916ffccc87101c4eac9d6722f4.png)
 
-
 The block diagram of the design in conjuction with the ZYNQ7 processor is shown below
 ![image](https://github.com/TIBBER999/Deepmentor_task/blob/main/img/block%20diagram.png)
+
+#Testbench
+In this repository there are two testbenches for verifying the DUT (fp16 unit): 
+
+1. TB_PY_fpu16_multiplier.sv
+2. TB_fp16_multiplier.sv
+
+The first testbench (TB_PY_fpu16_multiplier.sv) is an automated random stimulus testbench generated from the python file (Gen_Rand_Stim.py) and it aims to create a random value for both the inputs and check if the output of the DUT is coherent. Inside the Python script, I made a golden model of the fpu16 multiplier using numpy library which could confidently calculate the product of two floating points. Inside the SystemVerilog testbench, the value of the DUT and the golden reference are compared and checked.
+
+The second testbench (TB_fp16_multiplier.sv) is a manual stimulus testbench aiming to target specific edge cases of the DUT such as values like infinity, NaN, zeros, underflow, and overflow. 
+
+The combination of the two sets of testbench can mimic that of the industrial standard and allow reusability in similar projects in the future.
+
 
 # Vivado guide: 
 https://caslab.ee.ncku.edu.tw/dokuwiki/_media/course:logic_system_practice:pynq_usage.pdf
