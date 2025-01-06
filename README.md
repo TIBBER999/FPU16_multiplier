@@ -48,7 +48,7 @@ fp16 exponent and mantissa
 The block diagram of the design in conjuction with the ZYNQ7 processor is shown below
 ![image](https://github.com/TIBBER999/Deepmentor_task/blob/main/img/block%20diagram.png)
 
-# Testbench
+#Testbench
 In this repository there are two testbenches for verifying the DUT (fp16 unit): 
 
 1. TB_PY_fpu16_multiplier.sv
@@ -76,15 +76,16 @@ After the above steps, they will create a project with the IP blocks and perform
 1. Launch vitis
 2. Click "Open Workspace" and select the project directory that has been created by Vivado in the previous steps 
 3. Select "Create Platform Component" 
+![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/platform.png)
 4. Press "Next" after naming the platform
 5. Select "Hardware Design" and then browse for "zynq_pl_wrapper.xsa" that is located in $PATH_to_repo/fpu16_output/zynq_pl_wrapper.xsa
 6. It will automatically select "standalone" for operating system and "ps7_corexa9_0" for processor
 7. Finish the wizard.
 8. You should see this screen below
 9. Under "FLOW", build the platform
-![image]
+![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/after%20platform.png)
 10. Select "Examples" from the IDE
-![image]
+![image] (https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/examples.png)
 11. Create an embedded software example of "Hello World"
 12. select the platform you just created 
 13. Press Next until the Wizard finishes
@@ -97,7 +98,7 @@ After the above steps, they will create a project with the IP blocks and perform
 20. choose the corresponding serial port connection to the FPGA board
 21. Select "115200" for Speed(bps)
 22. Click on "Continue" in the IDE, and you should see a prompt on MOBAXTERM
-![image]
+![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/continue.png)
 23. Input values for operand A & B and the project should be displayed on the terminal 
 
 The youtube videos below are introductory videos that will walk through both the Vivado and Vitis steps.
@@ -120,13 +121,27 @@ A common issue in programming the fpga is the jumper connection. In order to run
 
 
 # Vivado 合成結果 report: timing, resource
-![image]
-![image]
-![image]
-![image]
+Timing 
+![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/Timing.png)
+
+power
+![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/power.png)
+
+Resources 
+![image] (https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/resources%20.png)
+
+Memory
+![image] (https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/memory.png)
+
+Summary 
+![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/summary.png)
 
 
-
+# FPGA 執行成果截圖
+![image] (https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/a%2Bb.png)
+![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/nan.png)
+![image] (https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/inf.png)
+![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/zero.png)
 
 # half-precision floating point format:
 https://en.wikipedia.org/wiki/Half-precision_floating-point_format
