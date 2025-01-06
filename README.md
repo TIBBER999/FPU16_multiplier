@@ -60,30 +60,68 @@ The second testbench (TB_fp16_multiplier.sv) is a manual stimulus testbench aimi
 
 The combination of the two sets of testbench can mimic that of the industrial standard and allow reusability in similar projects in the future.
 
-
-# Vivado guide: 
-https://caslab.ee.ncku.edu.tw/dokuwiki/_media/course:logic_system_practice:pynq_usage.pdf
-
-# FPGA guide: 
-https://www.makarenalabs.com/from-pynq-to-bare-metal-the-full-guide/ 
-https://caslab.ee.ncku.edu.tw/dokuwiki/_media/course:logic_system_practice:pynq_usage.pdf 
+# Vivado TCl
 
 
+1. launch Vivado
+2. In the tabs bar go to "Tools" -> "Run Tcl Script"
+3. execute $PATH_to_repo/recreate.tcl
+4. After the project have been recreated, Launch a second tcl within the Vivado project by "Tools" -> "Run Tcl Script"
+5. execute $PATH_to_repo/fpu16.tcl
 
-ZYNQ for beginners: programming and connecting the PS and PL | Part 2
+After the above steps, they will create a project with the IP blocks and perform synthesis, implementation, bitstream generation, and hardware exportation. After the scripts are performed, it will allow vitis to program the device and launch the C program.
 
+# Vitis Unified IDE 
+
+1. Launch vitis
+2. Click "Open Workspace" and select the project directory that has been created by Vivado in the previous steps 
+3. Select "Create Platform Component" 
+4. Press "Next" after naming the platform
+5. Select "Hardware Design" and then browse for "zynq_pl_wrapper.xsa" that is located in $PATH_to_repo/fpu16_output/zynq_pl_wrapper.xsa
+6. It will automatically select "standalone" for operating system and "ps7_corexa9_0" for processor
+7. Finish the wizard.
+8. You should see this screen below
+9. Under "FLOW", build the platform
+![image]
+10. Select "Examples" from the IDE
+![image]
+11. Create an embedded software example of "Hello World"
+12. select the platform you just created 
+13. Press Next until the Wizard finishes
+14. Replace the content of "helloworld.c" with  
+15. Insert $PATH_to_repo/xtime_l.h to $platform_directory/sw/standalone_ps7_cortexa9_0/include
+16. Build the Application
+17. Program device by clicking "Vitis -> Program Device". Make sure the connection is "Local" and the Bitstream is zynq_pl_wrapper.bit
+18. press "debug" for the C program on the IDE
+19. Launch MOBAXTERM or similar terminals, select "Session -> serial"
+20. choose the corresponding serial port connection to the FPGA board
+21. Select "115200" for Speed(bps)
+22. Click on "Continue" in the IDE, and you should see a prompt on MOBAXTERM
+![image]
+23. Input values for operand A & B and the project should be displayed on the terminal 
+
+The youtube videos below are introductory videos that will walk through both the Vivado and Vitis steps.
+ZYNQ for beginners: programming and connecting the PS and PL | Part 1 & Part 2
+https://www.youtube.com/watch?v=_odNhKOZjEo
 https://www.youtube.com/watch?v=AOy5l36DroY 
 
-diligent tutorial on vitis: 
-
+Getting Started with FPGA Design #4: Embedded C Application Basics in FPGAs
 https://www.youtube.com/watch?v=VO5zEzZnoNU
 
-** In order to run/debug a C program on the processor, the jumper for jtag must be disconnected.  All 4 Dip Switches must be ON..So - all 4 "ON" as in the location of the "ON" label on the dip component.
-They are all active low.. so they are actually all off.. I think.. but set them to "ON" - as in towards the center of the board and you should be OK. I recall the instructions being unclear.
-You should get a green light right away after turning the board on.. if it stays read something is wrong.
 
-** note to self: 
-after pressing debug on vitis check the serial connection output on mobaxterm. the output is there. Also do not click run/dubug button on the flow directly, go to the debug menu and start the C program from there instead.
+The pdf from NCKU is helpful for introducing Vivado and the necessary steps required to build a project from ground up.
+https://caslab.ee.ncku.edu.tw/dokuwiki/_media/course:logic_system_practice:pynq_usage.pdf
+
+A common issue in programming the fpga is the jumper connection. In order to run/debug a C program on the processor, the jumper for jtag must be disconnected. All 4 Dip Switches must be ON. They are all active low. You should get a green light right away after turning the board on, if it stays red something is wrong.
+
+
+# Vivado 合成結果 report: timing, resource
+![image]
+![image]
+![image]
+![image]
+
+
 
 
 # half-precision floating point format:
