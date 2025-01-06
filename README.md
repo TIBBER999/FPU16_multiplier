@@ -19,12 +19,6 @@ iii. Vivado 合成結果 report: timing, resource
 
 3. FPGA 執行成果截圖
 
-# Requirements:
-1. Should implement subnormal numbers as input and output.
-2. No need to support infinity and NaN.
-3. Should implement f16 golden function in FPU_Multiplier.c, and verify the result
-from PL.
-
 # Implementations:
 The role of the 16 bit floating point multiplier(fp16) is to multiply 2 floating points (a, b) and compute its product. The 16 bits floating points representation follows the IEEE 754-2008 standard. 
 According to the standard:
@@ -65,9 +59,9 @@ The combination of the two sets of testbench can mimic that of the industrial st
 
 1. launch Vivado
 2. In the tabs bar go to "Tools" -> "Run Tcl Script"
-3. execute $PATH_to_repo/recreate.tcl
+3. execute $PATH_to_repo/project_creation.tcl
 4. After the project have been recreated, Launch a second tcl within the Vivado project by "Tools" -> "Run Tcl Script"
-5. execute $PATH_to_repo/fpu16.tcl
+5. execute $PATH_to_repo/Vivado_synth.tcl
 
 After the above steps, they will create a project with the IP blocks and perform synthesis, implementation, bitstream generation, and hardware exportation. After the scripts are performed, it will allow vitis to program the device and launch the C program.
 
@@ -158,12 +152,3 @@ Multiplying by infinity
 Multiplying by zero
 
 ![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/zero.png)
-
-# half-precision floating point format:
-https://en.wikipedia.org/wiki/Half-precision_floating-point_format
-
-Almost all modern uses follow the IEEE 754-2008 standard, where the 16-bit base-2 format is referred to as binary16, and the exponent uses 5 bits. This can express values in the range ±65,504, with the minimum value above 1 being 1 + 1/1024. 
-
-![image](picture or gif url)
-
-
