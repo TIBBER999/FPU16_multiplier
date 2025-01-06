@@ -122,25 +122,41 @@ A common issue in programming the fpga is the jumper connection. In order to run
 
 # Vivado 合成結果 report: timing, resource
 Timing 
+
 ![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/Timing.png)
 
-power
+Power
+
 ![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/power.png)
 
 Resources 
+
 ![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/resources%20.png)
 
 Memory
+
 ![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/memory.png)
 
 Summary 
+
 ![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/summary.png)
 
 
 # FPGA 執行成果截圖
+Multiplying by float
+
 ![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/a%2Bb.png)
+
+Multiplying by NaN
+
 ![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/nan.png)
+
+Multiplying by infinity
+
 ![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/inf.png)
+
+Multiplying by zero
+
 ![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/zero.png)
 
 # half-precision floating point format:
