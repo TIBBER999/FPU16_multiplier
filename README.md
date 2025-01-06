@@ -102,14 +102,18 @@ After the above steps, they will create a project with the IP blocks and perform
 
 The youtube videos below are introductory videos that will walk through both the Vivado and Vitis steps.
 ZYNQ for beginners: programming and connecting the PS and PL | Part 1 & Part 2
+
 https://www.youtube.com/watch?v=_odNhKOZjEo
+
 https://www.youtube.com/watch?v=AOy5l36DroY 
 
 Getting Started with FPGA Design #4: Embedded C Application Basics in FPGAs
+
 https://www.youtube.com/watch?v=VO5zEzZnoNU
 
 
 The pdf from NCKU is helpful for introducing Vivado and the necessary steps required to build a project from ground up.
+
 https://caslab.ee.ncku.edu.tw/dokuwiki/_media/course:logic_system_practice:pynq_usage.pdf
 
 A common issue in programming the fpga is the jumper connection. In order to run/debug a C program on the processor, the jumper for jtag must be disconnected. All 4 Dip Switches must be ON. They are all active low. You should get a green light right away after turning the board on, if it stays red something is wrong.
