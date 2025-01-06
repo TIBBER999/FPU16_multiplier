@@ -128,19 +128,19 @@ power
 ![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/power.png)
 
 Resources 
-![image] (https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/resources%20.png)
+![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/resources%20.png)
 
 Memory
-![image] (https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/memory.png)
+![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/memory.png)
 
 Summary 
 ![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/summary.png)
 
 
 # FPGA 執行成果截圖
-![image] (https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/a%2Bb.png)
+![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/a%2Bb.png)
 ![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/nan.png)
-![image] (https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/inf.png)
+![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/inf.png)
 ![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/zero.png)
 
 # half-precision floating point format:
