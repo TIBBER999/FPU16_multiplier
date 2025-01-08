@@ -12,13 +12,15 @@ iii. Testbench
 
 2. FPGA 測試流程和結果
 
-i. 流程說明文件
+i. FPGA 執行成果截圖
 
-ii. 專案啟動腳本(tcl): 從 source code 建立 viado 專案的流程說明，以及使用 vitis 測試 IP 的流程說明
+ii. 流程說明文件
 
-iii. Vivado 合成結果 report: timing, resource
+iii. 專案啟動腳本(tcl): 從 source code 建立 viado 專案的流程說明，以及使用 vitis 測試 IP 的流程說明
 
-3. FPGA 執行成果截圖
+iiii. Vivado 合成結果 report: timing, resource
+
+
 
 # Implementations:
 The role of the 16 bit floating point multiplier(fp16) is to multiply 2 floating points (a, b) and compute its product. The 16 bits floating points representation follows the IEEE 754-2008 standard. 
