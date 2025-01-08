@@ -59,6 +59,26 @@ The combination of the two sets of testbench can mimic that of the industrial st
 
 I will test the correctness of the system by connecting the FPGA to a host computer with a serial communication port. The FPGA will have a bistream of the DUT and a ZYNQ processing system downloaded to it, and I will be running a c program on it that allow an user to input two operands and display the result of the multiplication on the terminal. The system works correctly and fluently except that it doesn't have input checking so if the user inputs anything other than a float, it will go into an endless loop. The stability of the board raises question as the same code can be built and work and it will not work the next time.
 
+# FPGA 執行成果截圖
+Multiplying by float 1
+
+![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/a%2Bb.png)
+
+Multiplying by float 2
+
+![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/ab_dec.png)
+
+Multiplying by NaN
+
+![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/nan.png)
+
+Multiplying by infinity
+
+![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/inf.png)
+
+Multiplying by zero
+
+![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/zero.png)
 
 # Vivado TCl
 
@@ -141,24 +161,5 @@ Summary
 ![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/summary.png)
 
 
-# FPGA 執行成果截圖
-Multiplying by float 1
 
-![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/a%2Bb.png)
-
-Multiplying by float 2
-
-![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/ab_dec.png)
-
-Multiplying by NaN
-
-![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/nan.png)
-
-Multiplying by infinity
-
-![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/inf.png)
-
-Multiplying by zero
-
-![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/zero.png)
 
