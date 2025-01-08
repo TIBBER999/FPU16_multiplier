@@ -57,7 +57,7 @@ The combination of the two sets of testbench can mimic that of the industrial st
 
 # FPGA 測試流程和結果
 
-I will test the correctness of the system by connecting the FPGA to a host computer with a serial communication port. The FPGA will have a bistream of the DUT and a ZYNQ processing system downloaded to it, and I will be running a c program on it that allow an user to input two operands and display the result of the multiplication on the terminal. The system works correctly and fluently except that it doesn't have input checking so if the user inputs anything other than a float, it will go into an endless loop/
+I will test the correctness of the system by connecting the FPGA to a host computer with a serial communication port. The FPGA will have a bistream of the DUT and a ZYNQ processing system downloaded to it, and I will be running a c program on it that allow an user to input two operands and display the result of the multiplication on the terminal. The system works correctly and fluently except that it doesn't have input checking so if the user inputs anything other than a float, it will go into an endless loop. The stability of the board raises question as the same code can be built and work and it will not work the next time.
 
 
 # Vivado TCl
