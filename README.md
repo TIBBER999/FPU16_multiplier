@@ -1,6 +1,7 @@
 # Deepmentor_task
 
 # Delieverables
+
 1. Half-precision floating-point(f16)乘法器設計
 
 i. Design Verilog 檔案
@@ -56,7 +57,7 @@ The combination of the two sets of testbench can mimic that of the industrial st
 
 # FPGA 測試流程和結果
 
-I will test the correctness of the system by connecting the FPGA to a host computer with a serial communication port. The FPGA will have a bistream of the DUT and a ZYNQ processing system downloaded to it, and I will be running a c program on it that allow an user to input two operands and display the result of the multiplication on the terminal. The system works correctly and fluently except for a mischievous bug where any input that contains a decimal point will result in a infinite loop in the program. This bug exist in the original repo and in the original C program. The original C program sends data as 32 bit floats, but since I am working with a 16 bit multiplier we must send 16 bits of data, so I modify the Xil_Out32 function to Xil_Out16 and casted the *float datatype to a u16 datatype for the operands
+I will test the correctness of the system by connecting the FPGA to a host computer with a serial communication port. The FPGA will have a bistream of the DUT and a ZYNQ processing system downloaded to it, and I will be running a c program on it that allow an user to input two operands and display the result of the multiplication on the terminal. The system works correctly and fluently except that it doesn't have input checking so if the user inputs anything other than a float, it will go into an endless loop/
 
 
 # Vivado TCl
@@ -141,9 +142,13 @@ Summary
 
 
 # FPGA 執行成果截圖
-Multiplying by float
+Multiplying by float 1
 
 ![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/a%2Bb.png)
+
+Multiplying by float 2
+
+![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/ab_dec.png)
 
 Multiplying by NaN
 
@@ -156,3 +161,4 @@ Multiplying by infinity
 Multiplying by zero
 
 ![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/zero.png)
+
