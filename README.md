@@ -42,7 +42,7 @@ fp16 exponent and mantissa
 The block diagram of the design in conjuction with the ZYNQ7 processor is shown below
 ![image](https://github.com/TIBBER999/Deepmentor_task/blob/main/img/block%20diagram.png)
 
-#Testbench
+# Testbench
 In this repository there are two testbenches for verifying the DUT (fp16 unit): 
 
 1. TB_PY_fpu16_multiplier.sv
@@ -53,6 +53,11 @@ The first testbench (TB_PY_fpu16_multiplier.sv) is an automated random stimulus 
 The second testbench (TB_fp16_multiplier.sv) is a manual stimulus testbench aiming to target specific edge cases of the DUT such as values like infinity, NaN, zeros, underflow, and overflow. 
 
 The combination of the two sets of testbench can mimic that of the industrial standard and allow reusability in similar projects in the future.
+
+# FPGA 測試流程和結果
+
+I will test the correctness of the system by connecting the FPGA to a host computer with a serial communication port. The FPGA will have a bistream of the DUT and a ZYNQ processing system downloaded to it, and I will be running a c program on it that allow an user to input two operands and display the result of the multiplication on the terminal. The system works correctly and fluently except for a mischievous bug where any input that contains a decimal point will result in a infinite loop in the program. This bug exist in the original repo and in the original C program. The original C program sends data as 32 bit floats, but since I am working with a 16 bit multiplier we must send 16 bits of data, so I modify the Xil_Out32 function to Xil_Out16 and casted the *float datatype to a u16 datatype for the operands
+
 
 # Vivado TCl
 
@@ -78,13 +83,12 @@ After the above steps, they will create a project with the IP blocks and perform
 8. You should see this screen below
 9. Under "FLOW", build the platform
 ![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/after%20platform.png)
-10. Select "Examples" from the IDE
-![image] (https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/examples.png)
-11. Create an embedded software example of "Hello World"
+10. Select "File -> New Component -> Application" from the IDE,
+11. Create an application 
 12. select the platform you just created 
 13. Press Next until the Wizard finishes
-14. Replace the content of "helloworld.c" with  
-15. Insert $PATH_to_repo/xtime_l.h to $platform_directory/sw/standalone_ps7_cortexa9_0/include
+14. Import the fpu_multiplier.c into the src folder  
+15. Insert $PATH_to_repo/C_header to $platform_directory/sw/standalone_ps7_cortexa9_0/include
 16. Build the Application
 17. Program device by clicking "Vitis -> Program Device". Make sure the connection is "Local" and the Bitstream is zynq_pl_wrapper.bit
 18. press "debug" for the C program on the IDE
