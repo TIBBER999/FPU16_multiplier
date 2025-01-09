@@ -97,7 +97,7 @@ Multiplying by zero
 ![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/part%20select.png)
 7. create block design
 ![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/create%20ip.png)
-8. add ZYNQ7 Processing System, AXI interconnect, Processor System Reset IPs and fpu16)multiplier and mm2c16_interface to the block design and connect it as follow:
+8. add ZYNQ7 Processing System, AXI interconnect, Processor System Reset IPs and fpu16_multiplier and mm2c16_interface to the block design and connect it as follow:
 ![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/block%20diagram.png)
 9. right click on the wrapper.bd from the "Design Sources" tab and create HDL wrapper and let vivado manage wrapper.
 ![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/vivado_hdl.png)
