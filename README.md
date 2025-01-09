@@ -126,7 +126,7 @@ After the above steps, they will create a project with the IP blocks and perform
 12. select the platform you just created 
 13. Press Next until the Wizard finishes
 14. Import the fpu_multiplier.c into the src folder  
-15. Insert $PATH_to_repo/C_header to $platform_directory/sw/standalone_ps7_cortexa9_0/include
+15. Insert $PATH_to_repo/xtime_l.h to $platform_directory/sw/standalone_ps7_cortexa9_0/include
 16. Build the Application
 17. Program device by clicking "Vitis -> Program Device". Make sure the connection is "Local" and the Bitstream is zynq_pl_wrapper.bit
 18. press "debug" for the C program on the IDE
