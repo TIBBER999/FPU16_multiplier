@@ -95,16 +95,16 @@ Multiplying by zero
 ![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/add%20constraint.png)
 6. select xc7z020clg400-1 as part number 
 ![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/part%20select.png)
-3. create block design
+7. create block design
 ![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/create%20ip.png)
-4. add ZYNQ7 Processing System, AXI interconnect, Processor System Reset IPs and fpu16)multiplier and mm2c16_interface to the block design and connect it as follow:
+8. add ZYNQ7 Processing System, AXI interconnect, Processor System Reset IPs and fpu16)multiplier and mm2c16_interface to the block design and connect it as follow:
 ![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/block%20diagram.png)
-5. right click on the wrapper.bd from the "Design Sources" tab and create HDL wrapper and let vivado manage wrapper.
+9. right click on the wrapper.bd from the "Design Sources" tab and create HDL wrapper and let vivado manage wrapper.
 ![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/vivado_hdl.png)
-6. click on run synthesis
-7. click on run implementation
-8. click on generate Bitstream
-9. export the hardware by going to "File -> Export -> Export Hardware" and and select "include bitstream". An .xsa file should be generated.
+10. click on run synthesis
+11. click on run implementation
+12. click on generate Bitstream
+13. export the hardware by going to "File -> Export -> Export Hardware" and and select "include bitstream". An .xsa file should be generated.
 
 After the above steps, they will create a project with the IP blocks and perform synthesis, implementation, bitstream generation, and hardware exportation. After the scripts are performed, it will allow vitis to program the device and launch the C program.
 
