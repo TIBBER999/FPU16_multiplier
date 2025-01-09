@@ -88,13 +88,19 @@ Multiplying by zero
 1. launch Vivado
 2. create project by "File -> Project -> new"
 3. Select RTL project
+![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/RTL%20project.png)
 4. Add sources 
+![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/add%20source.png)
 5. Add constraint
+![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/add%20constraint.png)
 6. select xc7z020clg400-1 as part number 
+![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/part%20select.png)
 3. create block design
+![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/create%20ip.png)
 4. add ZYNQ7 Processing System, AXI interconnect, Processor System Reset IPs and fpu16)multiplier and mm2c16_interface to the block design and connect it as follow:
-![iamge]()
+![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/block%20diagram.png)
 5. right click on the wrapper.bd from the "Design Sources" tab and create HDL wrapper and let vivado manage wrapper.
+![image](https://github.com/TIBBER999/FPU16_multiplier/blob/main/img/vivado_hdl.png)
 6. click on run synthesis
 7. click on run implementation
 8. click on generate Bitstream
