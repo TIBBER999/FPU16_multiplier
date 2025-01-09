@@ -86,10 +86,19 @@ Multiplying by zero
 
 
 1. launch Vivado
-2. In the tabs bar go to "Tools" -> "Run Tcl Script"
-3. execute $PATH_to_repo/project_creation.tcl
-4. After the project have been recreated, Launch a second tcl within the Vivado project by "Tools" -> "Run Tcl Script"
-5. execute $PATH_to_repo/Vivado_synth.tcl
+2. create project by "File -> Project -> new"
+3. Select RTL project
+4. Add sources 
+5. Add constraint
+6. select xc7z020clg400-1 as part number 
+3. create block design
+4. add ZYNQ7 Processing System, AXI interconnect, Processor System Reset IPs and fpu16)multiplier and mm2c16_interface to the block design and connect it as follow:
+![iamge]()
+5. right click on the wrapper.bd from the "Design Sources" tab and create HDL wrapper and let vivado manage wrapper.
+6. click on run synthesis
+7. click on run implementation
+8. click on generate Bitstream
+9. export the hardware by going to "File -> Export -> Export Hardware" and and select "include bitstream". An .xsa file should be generated.
 
 After the above steps, they will create a project with the IP blocks and perform synthesis, implementation, bitstream generation, and hardware exportation. After the scripts are performed, it will allow vitis to program the device and launch the C program.
 
